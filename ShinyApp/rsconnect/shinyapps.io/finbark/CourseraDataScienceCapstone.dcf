@@ -1,0 +1,12 @@
+name: CourseraDataScienceCapstone
+title: CourseraDataScienceCapstone
+username:
+account: finbark
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 831402
+bundleId: 1980426
+url: https://finbark.shinyapps.io/CourseraDataScienceCapstone/
+when: 1554179478.11958
+asMultiple: FALSE
+asStatic: FALSE

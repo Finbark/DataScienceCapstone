@@ -1,0 +1,52 @@
+---
+title: "Coursera Data Science Capstone"
+author: "Finbark"
+date: "2 April 2019"
+output: slidy_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Introduction
+The purpose of the capstone project is to build an app that can predict the next word after one has been input. The Shiny framework was used.
+
+The Shiny App:https://finbark.shinyapps.io/CourseraDataScienceCapstone/
+
+Source code:https://github.com/Finbark/DataScienceCapstone
+
+Source data:https://d396qusza40orc.cloudfront.net/dsscapstone/dataset/Coursera-SwiftKey.zip
+
+
+## Methodology
+Data was obtained from blogs, twitter, and news articles. This data was sampled to reduce the file size and then fed into the following process:
+
+- Data cleaned by removing numbers, whitespace and punctuation, and by changing all text to lowercase. 
+
+- The cleaned data tokenised into a corpus using the TM Package.
+
+- The corpus was then coverted into bi, tri, and quad n-grams, which are a sequence of contiguous n items from a given text. 
+
+- To predict off the n-grams, the Katz Back-off algorithm was used.
+
+## Katz Back-off Algorithm
+The algorithm works as follows:
+
+- Load n-gram dataframes.
+
+- Check if the input matches a stored quadgram. If so, return the next word.
+
+- If no match, check the trigram dataframe and return if there is a match.
+
+- Failing that, check the bigram dataframe and return if there is a match.
+
+
+## The app itself
+Below is an image of the app. It is a very simple design, where the user inputs their text in the left hand box and the prediction is displayed on the right.
+
+![](./Example.jpg)
+
+
+## Thanks very much
+This concludes the presentation.
